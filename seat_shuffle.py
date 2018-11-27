@@ -6,9 +6,23 @@ def read01():
 
     m_list = f.read()
     members = m_list.split("\n")
-    print(random.sample(members, 6))
-    for member in members:
-        print(random.sample(member, 2))
+
+    choice1 = random.sample(members, 6)
+    for i in range(0, len(choice1)):
+        members.remove(choice1[i])
+
+    choice2 = random.sample(members, 5)
+
+    for i in range(0, len(choice2)):
+        members.remove(choice2[i])
+
+    choice3 = members
+
+    print(f"table1 :{choice1}\n"
+          f"table2 :{choice2}\n"
+          f"table3 :{choice3}"
+          )
+
 
     f.close()
 
